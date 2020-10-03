@@ -1,5 +1,4 @@
 {
-
   "name": "js-dev-en",
   "version": "1.0.0",
   "description": "",
@@ -40,5 +39,4 @@
   "devDependencies": {
     "webpack-bundle-analyzer": "^3.8.0"
   }
-
 }
