@@ -33,8 +33,13 @@ Route.prototype.addRouteToStart = function(distance, start) {
   this.distance(distance);
 };
 
+Route.prototype.addReverseRoute = function(start, end) {
+  this.proto.addDirectedEdge(start, end);
+};
+
 const route1 = new Route(500, 'A1', 'A2');
-route1.addRouteToStart(200);
-console.log(route1.proto.edges());
+route1.addReverseRoute('A2', 'A1');
+console.log(route1.proto.extremities(route1.proto.edges()[0]));
+console.log(route1.proto.extremities(route1.proto.edges()[1]));
 
 module.exports = Route;
